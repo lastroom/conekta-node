@@ -1,5 +1,4 @@
 syntax: glob;
 
 node_modules
-test.html
-test.js
+.DS_Store

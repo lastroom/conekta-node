@@ -1,10 +1,10 @@
-Conekta 
+Conekta node.js wrapper
 =========
 
 Install
 
 ```sh
-npm install conekta
+npm install conekta-node
 ```
 
 Charge via card
@@ -12,7 +12,7 @@ Charge via card
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
+conekta.api_key = '';
 
 var data = {
     "description": "Grad Stogies: Second Class",
@@ -49,7 +49,7 @@ Charge via oxxo
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
+conekta.api_key = '';
 
 var data = {
     "currency": "MXN",
@@ -80,7 +80,7 @@ Charge via bank:
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
+conekta.api_key = '';
 
 var data = {
     "currency": "MXN",
@@ -112,7 +112,7 @@ console.log(charge.error.type);
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
+conekta.api_key = '';
 
 var events = conekta.Event.all();
 
