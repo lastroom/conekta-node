@@ -1,10 +1,10 @@
-Conekta node.js wrapper
+Conekta 
 =========
 
 Install
 
 ```sh
-npm install conekta-node
+npm install conekta
 ```
 
 Charge via card
@@ -12,7 +12,7 @@ Charge via card
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '';
+conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
 
 var data = {
     "description": "Grad Stogies: Second Class",
@@ -35,13 +35,11 @@ var data = {
     }
 }
 
-var charge = conekta.Charge.create(data);
-
-//Also you can get the attributes from the conekta response class:
-console.log(charge.id);
-
-//Or if you get an error:
-console.log(charge.error.type);
+var charge = conekta.Charge.create({
+    params: data,
+    success: function() {},
+    errror: function() {}
+});
 ```
 
 Charge via oxxo
@@ -49,7 +47,7 @@ Charge via oxxo
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '';
+conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
 
 var data = {
     "currency": "MXN",
@@ -66,13 +64,11 @@ var data = {
     }
 }
 
-var charge = conekta.Charge.create(data);
-
-//Also you can get the attributes from the conekta response class:
-console.log(charge.id);
-
-//Or if you get an error:
-console.log(charge.error.type);
+var charge = conekta.Charge.create({
+    params: data,
+    success: function() {},
+    errror: function() {}
+});
 ```
 
 Charge via bank:
@@ -80,7 +76,7 @@ Charge via bank:
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '';
+conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
 
 var data = {
     "currency": "MXN",
@@ -97,13 +93,11 @@ var data = {
     }
 }
 
-var charge = conekta.Charge.create(data);
-
-//Also you can get the attributes from the conekta response class:
-console.log(charge.id);
-
-//Or if you get an error:
-console.log(charge.error.type);
+var charge = conekta.Charge.create({
+    params: data,
+    success: function() {},
+    errror: function() {}
+});
 ```
 
 
@@ -112,7 +106,7 @@ console.log(charge.error.type);
 ```javascript
 var conekta = require('conekta');
 
-conekta.api_key = '';
+conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
 
 var events = conekta.Event.all();
 
