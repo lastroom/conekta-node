@@ -56,11 +56,35 @@
     }
   }
 
+  var Payee = function(ref) {
+    var conekta = ref;
+    return {
+      create: function(params) {
+        params['endpoint'] = 'payees';
+        params['method'] = 'post';
+        conekta.load(params);
+      }
+    }
+  }
+
+  var Payout = function(ref) {
+    var conekta = ref;
+    return {
+      create: function(params) {
+        params['endpoint'] = 'payouts';
+        params['method'] = 'post';
+        conekta.load(params);
+      }
+    }
+  }
+
 
   var Conekta = function() {
     this.Charge = new Charge(this);
     this.Event = new Event(this);
     this.Token = new Token(this);
+    this.Payee = new Payee(this);
+    this.Payout = new Payout(this);
   };
 
   Conekta.prototype.public_key = void 0;
