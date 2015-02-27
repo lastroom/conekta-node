@@ -100,6 +100,46 @@ var charge = conekta.Charge.create({
 });
 ```
 
+# Payee
+
+Create payee
+
+```javascript
+var data = {
+    name: 'Julian Ceballos',
+    email: 'julian@lastroom.mx',
+    phone: '9991622695',
+    payout_method: {
+        type: 'bank_transfer_payout_method',
+        account_number: '123456789012345678',
+        account_holder: 'Julian Ceballos'
+    }
+};
+
+conekta.Payee.create({
+    params: data,
+    success: function(payeeResp) {},
+    error: function(payeeErr) {}
+});
+```
+
+# Payouts
+
+Create payout
+
+```javascript
+var data = {
+    amount: 10000,
+    currency: 'MXN',
+    payee_id: payee_id
+};
+
+conekta.Payout.create(
+    params: data,
+    success: function(payoutResp) {},
+    error: function(payoutErr) {}
+});
+```
 
 #Retrieve events
 
