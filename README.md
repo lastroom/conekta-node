@@ -105,6 +105,10 @@ var charge = conekta.Charge.create({
 Create payee
 
 ```javascript
+var conekta = require('conekta');
+
+conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
+
 var data = {
     name: 'Julian Ceballos',
     email: 'julian@lastroom.mx',
@@ -128,6 +132,10 @@ conekta.Payee.create({
 Create payout
 
 ```javascript
+var conekta = require('conekta');
+
+conekta.api_key = '1tv5yJp3xnVZ7eK67m4h';
+
 var data = {
     amount: 10000,
     currency: 'MXN',
@@ -157,5 +165,7 @@ console.log(events);
 
 ```
 conekta.Charge.create()
+conekta.Payee.create()
+conekta.Payout.create()
 conekta.Event.all()
 ```
