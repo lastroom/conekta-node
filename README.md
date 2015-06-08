@@ -1,6 +1,8 @@
 Conekta 
 =========
 
+# This project is depricated we suggest the official: https://github.com/conekta/conekta-node
+
 Install
 
 ```sh
