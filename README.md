@@ -1,7 +1,7 @@
 Conekta 
 =========
 
-### This project is depricated we suggest the official: https://github.com/conekta/conekta-node
+### This project is depricated we suggest the official module: https://github.com/conekta/conekta-node
 
 Install
 
